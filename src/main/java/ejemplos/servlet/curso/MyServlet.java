@@ -14,19 +14,8 @@ public class MyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
+		response.sendRedirect("/jsp/pagina1.jsp");
 
-		// send HTML page to client
-		out.println("<html>");
-		out.println("<head><title>Ejemplo HTML desde Servlet</title></head>");
-		out.println("<body>");
-		out.println("<h1>Ejemplo Servlet</h1>");
-		out.println("<form action='/myServlet2'>");
-		out.println("<p>Indique aqui su nombre: <input type='text' name='nombre' value=''/></p>");
-		out.println("<p><input type='submit'  href=\"/myServlet2\" value='ACCEDER' /></p>");
-		out.println("</form>");
-		out.println("</body></html>");
 	}
 
 }
